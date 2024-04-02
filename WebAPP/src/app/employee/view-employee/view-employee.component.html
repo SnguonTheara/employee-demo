@@ -1,0 +1,26 @@
+<div >
+    <div class="" style="margin-top: 1rem;">
+        <h3 class="text-muted">Employee Detail</h3>
+        <div class="row ">
+            <span class="text-muted">Employee ID :</span>
+            <span class="text-sm">{{ employee?.employeeId }}</span>
+        </div>
+        <div class="row">
+            <span class="text-muted">Employee Name :</span>
+            <span class="text-sm">{{ employee?.fullName }}</span>
+        </div>
+        <div class="row">
+            <span class="text-muted">Employee Gender :</span>
+            <span class="text-sm">{{ employee?.gender }}</span>
+        </div>
+        <div class="row">
+            <span class="text-muted">Employee Birtday :</span>
+            <span class="text-sm">{{ employee?.birthDay }}</span>
+        </div>
+    </div>
+    <div class="" style="margin-top: 1rem;">
+        <button (click)="deleteEmployee(employee.id)" class="btn bnt-lg btn-danger" style="margin-right: 1rem;">Delete</button>
+        <button class="btn bnt-lg btn-info" style="margin-right: 1rem;">Edit</button>
+        <button (click)="back()" class="btn bnt-lg btn-primary" style="margin-right: 1rem;">Back</button>
+    </div>
+</div>

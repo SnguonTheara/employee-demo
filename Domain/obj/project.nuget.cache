@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "E0xEZUoXtoLyk0BuCcj2gigq9fRO37mEvxA5XiW/mETJ2Qe8t9mzot+3Sy4w7JlFm4qXnSVSxKJHczmq6vw/0Q==",
+  "success": true,
+  "projectFilePath": "/Users/Theara/Documents/DEMO/EmployeeDemo/repos/employee-demo/Domain/Domain.csproj",
+  "expectedPackageFiles": [
+    "/Users/Theara/.nuget/packages/microsoft.netcore.app.ref/7.0.15/microsoft.netcore.app.ref.7.0.15.nupkg.sha512",
+    "/Users/Theara/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.15/microsoft.aspnetcore.app.ref.7.0.15.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "91EDvhPGjsoiWspCu27T3fI3+FiKjV7UfnzHTQKhYL+NKBMSYWOtvNp80kqqTKuTy8rj706Y6h3fmDlEZdPOZA==",
+  "success": true,
+  "projectFilePath": "/Users/Theara/Documents/DEMO/EmployeeDemo/repos/employee-demo/Application/Application.csproj",
+  "expectedPackageFiles": [
+    "/Users/Theara/.nuget/packages/fluentvalidation/11.9.0/fluentvalidation.11.9.0.nupkg.sha512",
+    "/Users/Theara/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.9.0/fluentvalidation.dependencyinjectionextensions.11.9.0.nupkg.sha512",
+    "/Users/Theara/.nuget/packages/mediatr/12.2.0/mediatr.12.2.0.nupkg.sha512",
+    "/Users/Theara/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
+    "/Users/Theara/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "/Users/Theara/.nuget/packages/microsoft.netcore.app.ref/7.0.15/microsoft.netcore.app.ref.7.0.15.nupkg.sha512",
+    "/Users/Theara/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.15/microsoft.aspnetcore.app.ref.7.0.15.nupkg.sha512"
+  ],
+  "logs": []
+}

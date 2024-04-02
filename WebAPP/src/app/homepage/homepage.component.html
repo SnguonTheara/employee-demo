@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+  <a class="navbar-brand page-title" href="#">Employee Application</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li *ngIf="isUserAuthenticated()" class="nav-item">
+        <a class="nav-link" routerLink="/employee">Employees</a>
+      </li>
+      <li *ngIf="isUserAuthenticated()" class="nav-item right">
+        <a class="nav-link" (click)="logOut()">Logout</a>
+      </li>
+    </ul>
+
+    
+  </div>
+</nav>
+<div *ngIf="!isUserAuthenticated()">
+  <login></login>
+</div>
+
+
+
+<div *ngIf="isUserAuthenticated()" style="color:green;">
+  <div class="row" style="padding: 3rem;">
+    <div class="card" style="width: 18rem; margin-right: 1rem;">
+      <div class="card-body">
+        <p class="card-text text-muted">Total :</p>
+        <h1 class="card-title text-muted">{{ dashboard?.total }}</h1>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem; margin-right: 1rem;">
+      <div class="card-body">
+        <p class="card-text text-muted">Female : </p>
+        <h1 class="card-title text-muted">{{ dashboard?.female }}</h1>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <p class="card-text text-muted">Male : </p>
+        <h1 class="card-title text-muted">{{ dashboard?.male }}</h1>
+      </div>
+    </div>
+  </div>
+</div>

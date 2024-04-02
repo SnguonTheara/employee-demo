@@ -1,0 +1,98 @@
+  <div >
+    <div class="row" style="margin-top: 1rem;">
+       
+        <div class="col">
+            <div class="row">
+                <div class="col">
+                    <span>Search :</span>
+                    <input type="text" 
+                    placeholder="ID, Name, Birthday"
+                    class="form-control" 
+                    [(ngModel)]="filter.Query" 
+                    id="query" (input)="getEmployeeListFilter()">
+                </div>    
+                <div class="col">
+                    <span>Gender :</span>
+                    <select 
+                    class="form-control"
+                    [(ngModel)]="filter.Gender" 
+                    (change)="getEmployeeListFilter()">
+                    <option  [ngValue]="">All</option>
+                    <option  [ngValue]="1">Male</option>
+                    <option  [ngValue]="2">Female</option>
+                </select>
+                </div>
+                <div class="col">
+                    <span>Page :</span>
+                    <select 
+                        class="form-control"
+                        [(ngModel)]="filter.Page" 
+                        (change)="getEmployeeListFilter()">
+                        <option  [ngValue]="1">1</option>
+                        <option  [ngValue]="2">2</option>
+                        <option  [ngValue]="3">3</option>
+                        <option  [ngValue]="4">4</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <span>Limit :</span>
+                    <select 
+                    class="form-control"
+                    [(ngModel)]="filter.Limit" 
+                    (change)="getEmployeeListFilter()">
+                    <option  [ngValue]="15">15</option>
+                    <option  [ngValue]="25">25</option>
+                    <option  [ngValue]="35">35</option>
+                    <option  [ngValue]="45">45</option>
+                    <option  [ngValue]="100">100</option>
+                    </select>
+                </div>
+                <div class="col">
+                    &nbsp;
+                    <button class="btn btn-info form-control" (click)="exportEmployeeListAsPdf()">Export PDF</button>
+                </div>
+                <div class="col">
+                    &nbsp;
+                    <button class="btn btn-primary form-control" routerLink="/employee/create">Create New</button>
+                </div>  
+            </div>
+        </div>   
+         
+    </div>          
+    <br/>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+          
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Gender</th>
+          <th scope="col">Birthday</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let emp of employeeList?.data; index as i">
+          <td>{{emp.employeeId}}</td>
+          <td>{{emp.fullName}}</td>
+          <td>{{emp.gender | gender }}</td>
+          <td>{{emp.birthDay | date: 'dd MMMM yyyy' }}</td>
+          <td style="text-align: right;">
+            <button  (click)="viewEmployee(emp.id)" type="button" class="btn btn-block" matTooltip="View employee detail">View</button>
+            |
+            <button (click)="editEmployee(emp.id)"  type="button" class="btn btn-block" matTooltip="Click Edit Button">Edit</button>
+            |
+            <button (click)="deleteEmployee(emp.id)" type="button" class="btn btn-block" matTooltip="Click Delete Button">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="text-sm" style="text-align: right;">
+        <span>Total: {{ employeeList?.total }}</span>
+        <span> : </span>
+        <span>Page: {{ employeeList?.page }}</span>
+    </div>
+    
+  </div>
+  
